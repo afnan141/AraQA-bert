@@ -80,7 +80,7 @@ class SOQAL:
         dataset = self.build_quest_json(quest, docs)
         print("built documents json")
         nbest = self.reader.predict_batch(dataset)
-        print("got predictions from BERT")
+        print("got predictions from AraBERT")
         answers, answers_scores = self.get_predictions(nbest)
         prediction = self.agreggate(answers,answers_scores,doc_scores)
         return prediction
